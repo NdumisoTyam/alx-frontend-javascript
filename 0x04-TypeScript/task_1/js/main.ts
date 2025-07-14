@@ -1,4 +1,3 @@
-cat > 0x04-TypeScript/task_1/js/main.ts << 'EOF'
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
@@ -17,4 +16,19 @@ const teacher3: Teacher = {
 };
 
 console.log(teacher3);
-EOF
+
+// Extend Teacher interface to define Directors
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
+// Example usage
+const director1: Directors = {
+  firstName: 'John',
+  lastName: 'Doe',
+  location: 'London',
+  fullTimeEmployee: true,
+  numberOfReports: 17,
+};
+
+console.log(director1);
