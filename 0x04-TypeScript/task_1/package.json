@@ -1,0 +1,19 @@
+{
+  "name": "student-table-ts",
+  "version": "1.0.0",
+  "description": "Render a student table using TypeScript and vanilla JavaScript",
+  "main": "js/main.ts",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve --open"
+  },
+  "author": "Ndumiso",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.5",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "ts-loader": "^6.2.2",
+    "eslint": "^6.8.0"
+  }
+}
