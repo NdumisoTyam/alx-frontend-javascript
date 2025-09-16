@@ -1,3 +1,5 @@
+// task_1/js/main.ts
+
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
@@ -11,8 +13,8 @@ interface Director extends Teacher {
   numberOfReports: number;
 }
 
-interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
+export function printTeacher({ firstName, lastName }: Teacher): string {
+  return `${firstName}. ${lastName}`;
 }
 
 interface StudentClassInterface {
@@ -25,7 +27,6 @@ interface StudentClassConstructor {
 }
 
 class StudentClass implements StudentClassInterface {
-
   constructor(public firstName: string, public lastName: string) {}
 
   workOnHomework(): string {
@@ -53,7 +54,7 @@ const teacher2: Teacher = {
   contract: true,
 };
 
-const director1: Directors = {
+const director1: Director = {
   firstName: 'John',
   lastName: 'Doe',
   fullTimeEmployee: true,
@@ -61,16 +62,12 @@ const director1: Directors = {
   numberOfReports: 17,
 };
 
-const printTeacher: printTeacherFunction = (firstName, lastName) =>
-  `${firstName.charAt(0)}. ${lastName}`;
-
 const Student: StudentClassConstructor = StudentClass;
-
 const student = new Student('Mary', 'Poppins');
 
 console.log(teacher1);
 console.log(teacher2);
 console.log(director1);
-console.log(printTeacher('John', 'Doe'));
+console.log(printTeacher({ firstName: 'John', lastName: 'Doe' }));
 console.log(student.workOnHomework());
 console.log(student.displayName());
