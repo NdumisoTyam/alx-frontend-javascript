@@ -26,7 +26,7 @@ interface StudentClassConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
 }
 
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   constructor(public firstName: string, public lastName: string) {}
 
   workOnHomework(): string {
@@ -34,7 +34,7 @@ class StudentClass implements StudentClassInterface {
   }
 
   displayName(): string {
-    return this.lastName;
+    return this.firstName;
   }
 }
 
