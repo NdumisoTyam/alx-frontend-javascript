@@ -34,7 +34,7 @@ class StudentClass {
   }
 
   displayName(): string {
-    return this.firstName;
+    return this.lastName;
   }
 }
 
