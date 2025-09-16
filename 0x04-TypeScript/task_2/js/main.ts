@@ -67,7 +67,7 @@ function executeWork(employee: Director | Teacher): string {
 // 7. String literal type for subjects and teachClass function
 type Subjects = 'Math' | 'History';
 
-function teachClass(todayClass: Subjects): string {
+function teachClass(todayClass:Subjects): string {
   return `Teaching ${todayClass}`;
 }
 
