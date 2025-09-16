@@ -33,6 +33,10 @@ class StudentClass {
     return 'Currently working';
   }
 
+displayName(): string {
+    return this.firstName;
+  }
+  
   displayName(): string {
     return this.lastName;
   }
