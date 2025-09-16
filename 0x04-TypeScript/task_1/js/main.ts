@@ -13,8 +13,6 @@ interface Director extends Teacher {
   numberOfReports: number;
 }
 
-interface printTeacherFunction { (firstName: string, lastName: string): string; }
-
 export function printTeacher({ firstName, lastName }: Teacher): string {
   return `${firstName}. ${lastName}`;
 }
@@ -36,7 +34,7 @@ class StudentClass implements StudentClassInterface {
   }
 
   displayName(): string {
-    return this.firstName;
+    return this.lastName;
   }
 }
 
